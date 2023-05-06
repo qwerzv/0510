@@ -289,6 +289,7 @@ function handleKeydown(event) {
 }
 
 // Socket code
+//url 접속시 server에서 바로 보내는 함수
 socket.on("test", (RoomName, Nickname) => {
   event.preventDefault();
   const nicknameContainer = document.querySelector("#userNickname");
@@ -308,9 +309,9 @@ socket.on("reject_join", () => {
   nickname = "";
 });
 
-socket.on("accept_join", async (userObjArr) => {
+socket.on("accept_join", async (userObjArr,roomCode) => {
   await initCall();
-
+  console.log(roomCode);
   const length = userObjArr.length;
   if (length === 1) {
     return;

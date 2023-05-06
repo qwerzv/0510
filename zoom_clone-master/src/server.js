@@ -11,7 +11,11 @@ const conn = {  // mysql 접속 설정
     host: '127.0.0.1',
     port: '3306',
     user: 'root',
+<<<<<<< HEAD
     password: '',
+=======
+    password: 'password',//비번 입력
+>>>>>>> parent of 5169413 (05-06)
     database: 'GOSU'
 };
 

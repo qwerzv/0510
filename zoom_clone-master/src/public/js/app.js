@@ -308,7 +308,7 @@ socket.on("reject_join", () => {
   roomName = "";
   nickname = "";
 });
-//여기 roomCode가 url 코든데 pug에서 이거 값 보여줄 칸만 만들면돼
+
 socket.on("accept_join", async (userObjArr,roomCode) => {
   await initCall();
   console.log(roomCode);

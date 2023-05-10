@@ -14,6 +14,7 @@ const welcome = document.querySelector("#welcome");
 
 const HIDDEN_CN = "hidden";
 
+let RoomCode;
 let myStream;
 let muted = true;
 unMuteIcon.classList.add(HIDDEN_CN);
@@ -312,6 +313,7 @@ socket.on("reject_join", () => {
 socket.on("accept_join", async (userObjArr,roomCode) => {
   await initCall();
   console.log(roomCode);
+  RoomCode = roomCode;
   const length = userObjArr.length;
   if (length === 1) {
     return;
@@ -451,3 +453,16 @@ function handleConnectionStateChange(event) {
   }
 }
 */
+
+
+const inviteBtn = document.querySelector("#invite");
+let nowUrl = window.location.href;
+
+function inviteroom(){
+  console.log(RoomCode);
+  navigator.clipboard.writeText(nowUrl+RoomCode).then(res=>{
+	  alert("주소가 복사되었습니다!");
+	})
+}
+
+invateBtn.addEventListener("click", inviteroom);

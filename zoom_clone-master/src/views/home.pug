@@ -7,17 +7,17 @@ html(lang="en")
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.4/css/all.css", integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm", crossorigin="anonymous")
         //- link(rel="stylesheet", href="https://unpkg.com/mvp.css")
         link(rel="stylesheet", href="./public/css/style.css")
-        title Yoom
+        title Park
     body 
         header
-            i(class="fab fa-pied-piper-square fa-2x")
-            h1 Yoom
+            //- i(class="fab fa-pied-piper-square fa-2x")
+            h1 Park
         main
             div#welcome 
                 form
                     input#roomName(type="text", required, placeholder="Room Name")
                     input#nickname(type="text", required, placeholder="Your Nickname")
-                    button Enter Room
+                    button Create Room
 
             div#call(class="call")
                 div#streamBox
@@ -37,6 +37,8 @@ html(lang="en")
                                     i(class="fas fa-video fa-2x cameraIcon")
                                     i(class="fas fa-video-slash fa-2x unCameraIcon")
                         div#controlers__column
+                            button(onclick='inviteroom()')#invite 초대하기
+                            //- button#invate 초대하기
                             button#leave Leave
                 div#chatRoom
                     ul#chatBox

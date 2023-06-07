@@ -2,10 +2,11 @@
 
 :root {
   --black-color: #212121;
+  --white-color: #ffffff;
 
-  --header-background-color: #102027;
-  --main-background-color: #546e7a;
-  --chatBox-background-color: #37474f;
+  --header-background-color: #1c3742;
+  --main-background-color: rgba(83, 131, 232,0.3);
+  --chatBox-background-color: #667a85;
   --controler-background-color: #29434e;
 
   --green-icon-color: #23c552;
@@ -62,9 +63,10 @@ main {
 #welcome form {
   width: 500px;
   height: 400px;
+  background-color: var(--white-color);
 
   /* background-color: #62727b; */
-  border: 2px solid var(--header-background-color);
+  border: 1px solid var(--header-background-color);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -80,17 +82,17 @@ main {
   padding: 3px 10px;
   margin-bottom: 30px;
 
-  color: whitesmoke;
+  color :rgb(0, 0, 0);
   background: none;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1.5px solid rgb(0, 0, 0);
   outline: none;
 
   transition: box-shadow 0.3s ease-in-out;
 }
 
 #welcome input::placeholder {
-  color: whitesmoke;
+  color :rgba(0, 0, 0);
 }
 
 #welcome input:focus {
@@ -103,13 +105,17 @@ main {
   height: 10%;
   margin-top: 10px;
 
-  color: whitesmoke;
+  color :rgb(0, 0, 0);
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1.5px solid rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
   transition: all 0.1s ease-in-out;
+}
+
+#welcome button::placeholder {
+  color :rgba(0, 0, 0);
 }
 
 #welcome button:hover {
@@ -132,6 +138,7 @@ main {
 #streamBox #streams {
   width: 100%;
   height: calc(100% - 51px);
+  background-color: rgba(83, 131, 232,0.3);
 
   display: flex;
   justify-content: space-evenly;
@@ -317,7 +324,7 @@ main {
 
   overflow-y: auto;
   overflow-wrap: break-word;
-  color: whitesmoke;
+  color: white;
 }
 
 #chatRoom #chatBox li {
@@ -330,7 +337,7 @@ main {
 }
 
 #chatRoom #chatBox .noticeChat {
-  color: aquamarine;
+  color: WHITE;
 }
 
 #chatRoom #chatForm {

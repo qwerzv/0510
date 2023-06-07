@@ -313,6 +313,7 @@ socket.on("reject_join", () => {
 socket.on("accept_join", async (userObjArr,roomCode) => {
   await initCall();
   console.log(roomCode);
+  socket.emit("chat1",`${nickname} joined the room`, roomName);
   RoomCode = roomCode;
   const length = userObjArr.length;
   if (length === 1) {
@@ -334,7 +335,7 @@ socket.on("accept_join", async (userObjArr,roomCode) => {
       console.error(err);
     }
   }
-  writeChat("is in the room.", NOTICE_CN);
+  writeChat("방에 입장하였습니다.", NOTICE_CN);
 });
 
 socket.on("offer", async (offer, remoteSocketId, remoteNickname) => {
@@ -356,6 +357,12 @@ socket.on("answer", async (answer, remoteSocketId) => {
 
 socket.on("ice", async (ice, remoteSocketId) => {
   await pcObj[remoteSocketId].addIceCandidate(ice);
+});
+
+socket.on("chat1", (message) => {
+  console.log("실행됨");
+  console.log(message);
+  writeChat(message,NOTICE_CN);
 });
 
 socket.on("chat", (message) => {

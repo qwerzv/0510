@@ -160,6 +160,14 @@ wsServer.on("connection", (socket) => {
   socket.on("ice", (ice, remoteSocketId) => {
     socket.to(remoteSocketId).emit("ice", ice, socket.id);
   });
+  
+
+  
+  socket.on("chat1", (message, roomName) => {
+    console.log(message)
+    console.log(roomName);
+    socket.to(roomName).emit("chat1", message);
+  });
 
   socket.on("chat", (message, roomName) => {
     console.log(message)

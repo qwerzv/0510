@@ -1,7 +1,7 @@
 :root {
   --black-color: #212121;
   --header-background-color: #102027;
-  --main-background-color: #546e7a;
+  --main-background-color: rgba(83, 131, 232,0.3);;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   width: 500px;
   height: 400px;
 
-  /* background-color: #62727b; */
+  background-color: white;
   border: 2px solid var(--header-background-color);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -63,17 +63,17 @@ main {
   margin-left: 40px;
 
 
-  color: whitesmoke;
+  color: rgb(0,0,0);
   background: none;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgb(0, 0, 0);
   outline: none;
 
   transition: box-shadow 0.3s ease-in-out;
 }
 
 #mainform input::placeholder {
-  color: whitesmoke;
+  color: rgb(0,0,0);
 }
 
 #mainform input:focus {
@@ -82,17 +82,15 @@ main {
 }
 
 #mainform button {
-  
-  
   width: 250px;
   height: 50%;
   padding-right: 4px;
   margin-left: 120px;
   margin-top: 10px;
 
-  color: whitesmoke;
+  color: rgb(0,0,0);
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 

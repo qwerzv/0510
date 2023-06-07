@@ -17,7 +17,7 @@ html(lang="en")
                 form
                     input#roomName(type="text", required, placeholder="Room Name")
                     input#nickname(type="text", required, placeholder="Your Nickname")
-                    button Create Room
+                    button#create Create Room
 
             div#call(class="call")
                 div#streamBox
@@ -26,8 +26,9 @@ html(lang="en")
                             video#myFace(autoplay, playsinline, width="400", height="400")
                             h3#userNickname  
                     div#controlers
-                        div#controlers__column
-                            select#cameras
+                        div#test
+                            div#controlers__column
+                                select#cameras
                         div#controlers__column
                             div#buttons
                                 button#mute
